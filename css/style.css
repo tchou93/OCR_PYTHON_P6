@@ -1,0 +1,271 @@
+html {
+    box-sizing: border-box;
+    font-size: 15px;
+    background-color: black;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+    margin: 0;
+    color: white;
+}
+
+main {
+    max-width: 100%;
+    max-height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.nav-wrapper a {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav-wrapper {
+    position: sticky;
+    top: 0;
+    z-index: 3000;
+    height: 150px;
+    background-color: black;
+}
+
+.nav-banner {
+    display: flex;
+    height: 100%;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 100px 0 100px;
+}
+
+.nav-logo {
+    width: 150px;
+    height: auto;
+}
+
+.nav-banner a {
+    padding: 0 20px 0 20px;
+    color: white;
+    text-decoration: none;
+}
+
+.nav-banner a:hover {
+    color: red;
+}
+
+header {
+    height: 400px;
+    background: linear-gradient(black, rgb(68, 68, 68), black);
+    padding-bottom: 30px;
+}
+
+.movie-best {
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.movie-best-description {
+    width: 30%;
+    padding-right: 30px;
+    word-wrap: break-word;
+}
+
+.best-images {
+    height: 100%;
+}
+
+.best-images img {
+    height: 100%;
+    width: auto;
+}
+
+
+.style_button {
+    border: solid 3px black;
+    border-radius: 20px;
+    background-color: white;
+    color: black;
+    padding: 10px;
+}
+
+.fa-play:hover,
+.fa-circle-info:hover {
+    cursor: pointer;
+    background-color: red;
+}
+
+.fa-circle-play:hover {
+    cursor: pointer;
+    color: red;
+}
+
+.best-movies-categories-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.best-movies-category-title {
+    display: flex;
+    justify-content: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.best-movies-category-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.best-movie-list-bycategory {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+.fa-angles-left {
+    font-size: 4rem;
+    padding-right: 10px;
+}
+
+.fa-angles-left:hover,
+.fa-angles-right:hover {
+    cursor: pointer;
+    color: red;
+}
+
+.fa-angles-right {
+    font-size: 4rem;
+}
+
+.visibility-hidden {
+    visibility: hidden;
+}
+
+.display-none {
+    display: none;
+    color: red;
+}
+
+
+.card-movie-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card-movie {
+    margin-right: 10px;
+    transition: 0.3s;
+}
+
+.card-movie:hover {
+    box-shadow: 0 0 8px 8px rgba(252, 0, 0, 0.8);
+    cursor: pointer;
+}
+
+.card-movie-img {
+    width: 100%;
+    height: auto;
+}
+
+img::selection {
+    background: rgba(38, 119, 201, 0);
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    font-family: montserratSemiBold, Arial, Sans-Serif;
+}
+
+.modal-content {
+    background-color: #494848f1;
+    margin: 15% auto;
+    padding: 20px;
+    width: 40%;
+    height: auto;
+    border-color: white;
+    border-radius: 15px;
+}
+
+.fa-xmark {
+    color: #aaa;
+    float: right;
+    cursor: pointer;
+    font-size: 30px;
+    padding: 0 10px 0 0;
+    font-weight: bold;
+}
+
+.modal-head {
+    margin-bottom: 20px;
+}
+
+.modal-img {
+    height: 200px;
+    float: left;
+    margin-right: 5px;
+    border-radius: 15px;
+}
+
+.meta-body-style {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 0.375rem 0;
+}
+
+.spacer {
+    margin: 0 5px 0 5px;
+}
+
+.modal-body {
+    margin-top: 10px;
+}
+
+.light,
+.modal-body-synopsis,
+.title {
+    font-weight: bold;
+    color: #000000fa;
+    margin-right: 5px;
+}
+
+.meta-body-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.fa-circle-play {
+    font-size: 4rem;
+    color: black;
+}
+
+.fa-circle-play:hover {
+    cursor: pointer;
+}
+
+.best-movies-category-title {
+    font-size: 1.5rem;
+    background: linear-gradient(black, rgb(68, 68, 68), black);
+}
