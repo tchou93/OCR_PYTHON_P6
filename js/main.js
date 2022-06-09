@@ -11,8 +11,8 @@ const initCategories = function () {
         }
 
         //Add some informations on html
-        document.getElementsByClassName('best-movies-category-wrapper')[i].id = "category-" + category.toLowerCase();
-        document.getElementsByClassName('best-movies-category-title')[i].innerHTML = "Best " + category + " Movies";
+        document.getElementsByClassName('best-movies-category')[i].id = "category-" + category.toLowerCase();
+        document.getElementsByClassName('best-movies-category__title')[i].innerHTML = "Best " + category + " Movies";
         document.getElementsByClassName('fa-angles-left')[i].id = "button-left-" + category.toLowerCase();
         document.getElementsByClassName('fa-angles-right')[i].id = "button-right-" + category.toLowerCase();
 

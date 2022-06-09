@@ -1,6 +1,8 @@
+/* General parameters */
+
 html {
     box-sizing: border-box;
-    font-size: 15px;
+    font-size: 62.5%;
     background-color: black;
 }
 
@@ -13,102 +15,79 @@ html {
 }
 
 body {
-    font-family: montserratSemiBold, Arial, Sans-Serif;
-    margin: 0;
+    font-family: 'Raleway', sans-serif;
     color: white;
-    max-width: 100%;
-    max-height: 100%;
-    margin-left: auto;
-    margin-right: auto;
 }
 
-main {
-    max-width: 100%;
-    max-height: 100%;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.nav-wrapper a {
-    font-size: 1.5rem;
-    font-weight: bold;
-}
-
-/* .nav-wrapper {
-    position: sticky;
-    top: 0;
-    z-index: 3000;
-    height: 150px;
-    background-color: black;
-} */
-
-.nav-banner {
+/* Navigation part */
+nav {
     display: flex;
     width: 100%;
     height: 100%;
     justify-content: space-between;
     align-items: center;
     padding: 0 100px 0 100px;
-
     position: sticky;
     top: 0;
-    z-index: 3000;
-    height: 150px;
+    z-index: 1;
+    height: 13rem;
     background-color: black;
 }
 
-.nav-logo {
-    width: 150px;
+.nav-banner__logo {
+    width: 15rem;
     height: auto;
 }
 
-.nav-banner a {
+.nav-banner__links a {
+    font-size: 2.5rem;
+    font-weight: bold;
     padding: 0 20px 0 20px;
     color: white;
     text-decoration: none;
 }
 
-.nav-banner a:hover {
+.nav-banner__links a:hover {
     color: red;
 }
 
-header {
-    height: 400px;
+/* Header part */
+.best-movie {
+    display: flex;
+    height: 40rem;
     background: linear-gradient(black, rgb(68, 68, 68), black);
     padding-bottom: 30px;
-}
-
-.movie-best {
-    display: flex;
-    height: 100%;
     justify-content: center;
     align-items: center;
 }
 
-.movie-best-description {
+.best-movie__description {
     width: 30%;
     padding-right: 30px;
-    word-wrap: break-word;
 }
 
-.best-images {
+.best-movie__images {
     height: 100%;
 }
 
-.best-images img {
+.best-movie__images img {
     height: 100%;
-    width: auto;
     border: solid 1px white;
     border-radius: 20px;
 }
 
+#best-movie__description-title {
+    font-size: 4rem;
+}
 
-.style_button {
+.fa-play,
+.fa-circle-info {
     border: solid 3px black;
     border-radius: 20px;
     background-color: white;
     color: black;
     padding: 10px;
+    font-size: 1.7rem;
 }
 
 .fa-play:hover,
@@ -117,35 +96,33 @@ header {
     background-color: red;
 }
 
-.fa-circle-play:hover {
-    cursor: pointer;
-    color: red;
-}
+/* best-movies-categories part */
 
-.best-movies-categories-wrapper {
+.best-movies-categories {
     display: flex;
     flex-direction: column;
-    width: 100%;
 }
 
-.best-movies-category-title {
+.best-movies-category {
+    display: flex;
+    flex-direction: column;
+}
+
+.best-movies-category__title {
     display: flex;
     justify-content: center;
-    font-size: 1.2rem;
+    font-size: 2.5rem;
     font-weight: bold;
+    background: linear-gradient(black, rgb(68, 68, 68), black);
+    margin-bottom: 5px;
 }
 
-.best-movies-category-wrapper {
-    display: flex;
-    flex-direction: column;
-}
-
-.best-movie-list-bycategory {
+.best-movies-category__list {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
 }
 
 .fa-angles-left {
@@ -163,17 +140,7 @@ header {
     font-size: 4rem;
 }
 
-.visibility-hidden {
-    visibility: hidden;
-}
-
-.display-none {
-    display: none;
-    color: red;
-}
-
-
-.card-movie-list {
+.best-movies-category__list-card-movie {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -182,6 +149,7 @@ header {
 .card-movie {
     margin-right: 10px;
     transition: 0.3s;
+    width: 17rem;
 }
 
 .card-movie:hover {
@@ -191,40 +159,37 @@ header {
 
 .card-movie-img {
     width: 100%;
-    height: auto;
 }
 
-img::selection {
-    background: rgba(38, 119, 201, 0);
-}
-
-.modal {
+/* modal part */
+#modal {
     display: none;
     position: fixed;
-    z-index: 1;
+    z-index: 100;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.7);
-    /* font-family: montserratSemiBold, Arial, Sans-Serif; */
 }
 
 .modal-content {
     background-color: #494848f1;
     margin: 15% auto;
     padding: 20px;
-    width: 40%;
+    width: 50%;
     height: auto;
     border-color: white;
     border-radius: 15px;
+    font-size: 1.7rem;
+    word-break: break-word;
 }
 
 .fa-xmark {
     color: #aaa;
     float: right;
     cursor: pointer;
-    font-size: 30px;
+
     padding: 0 10px 0 0;
     font-weight: bold;
 }
@@ -233,14 +198,18 @@ img::selection {
     margin-bottom: 20px;
 }
 
-.modal-img {
-    height: 200px;
+#modal-title {
+    color: black;
+}
+
+#modal-image {
+    height: 25rem;
     float: left;
     margin-right: 5px;
     border-radius: 15px;
 }
 
-.meta-body-style {
+.modal-content__body--style {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -251,19 +220,17 @@ img::selection {
     margin: 0 5px 0 5px;
 }
 
-.modal-body {
+.modal-content__body {
     margin-top: 10px;
 }
 
-.light,
-.modal-body-synopsis,
-.title {
+.modal-light {
     font-weight: bold;
-    color: #000000fa;
+    color: black;
     margin-right: 5px;
 }
 
-.meta-body-button {
+.modal-content__body-button {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -276,19 +243,45 @@ img::selection {
 
 .fa-circle-play:hover {
     cursor: pointer;
+    color: red;
 }
 
-.best-movies-category-title {
-    font-size: 1.5rem;
-    background: linear-gradient(black, rgb(68, 68, 68), black);
+/* Modifier used by java script*/
+.visibility-hidden {
+    visibility: hidden;
 }
 
-/* --------------------------------- */
-/* Responsive part: Mobile           */
-/* --------------------------------- */
+.display-none {
+    display: none;
+}
+
+
+/* ----------------------- */
+/* Responsive part: tablet */
+/* ----------------------- */
+
+@media screen and (max-width: 991px) {
+    html {
+        font-size: 50%;
+    }
+
+    .modal-content {
+        margin: 30% auto;
+        width: 70%;
+    }
+}
+
+/* ----------------------- */
+/* Responsive part: Mobile */
+/* ----------------------- */
 
 @media screen and (max-width: 767px) {
-    .nav-banner {
-        flex-direction: column;
+    html {
+        font-size: 42%;
+    }
+
+    .modal-content {
+        margin: 35% auto;
+        width: 100%;
     }
 }

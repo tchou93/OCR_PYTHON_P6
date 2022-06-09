@@ -14,7 +14,6 @@ const fetchBestMoviesByCategory = function (category) {
         .catch(err => console.log('Erreur: ' + err));
 }
 
-
 const loadMoviesFromCategory = function (category, results) {
     document.getElementById(`button-left-${category}`).classList.add('visibility-hidden');
     document.getElementById(`category-${category}`).classList.remove('display-none');
@@ -24,3 +23,11 @@ const loadMoviesFromCategory = function (category, results) {
     }
 }
 
+const movieClick = function () {
+    let cardMovies = document.getElementsByClassName(`card-movie`);
+    Array.from(cardMovies).forEach(cardMovie => {
+        cardMovie.addEventListener('click', function () {
+            fetchMovieById(cardMovie.id);
+        })
+    });
+}
