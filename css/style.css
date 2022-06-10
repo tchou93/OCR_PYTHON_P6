@@ -66,18 +66,19 @@ nav {
     padding-right: 30px;
 }
 
-.best-movie__images {
-    height: 100%;
-}
-
-.best-movie__images img {
-    height: 100%;
-    border: solid 1px white;
-    border-radius: 20px;
-}
-
 #best-movie__description-title {
     font-size: 4rem;
+    margin-bottom: 0;
+}
+
+#best-movie__description-synopsis {
+    font-size: 1.2rem;
+    font-style: italic;
+    margin-bottom: 2rem;
+}
+
+.best-movie__images {
+    height: 100%;
 }
 
 .fa-play,
@@ -94,6 +95,12 @@ nav {
 .fa-circle-info:hover {
     cursor: pointer;
     background-color: red;
+}
+
+.best-movie__images img {
+    height: 100%;
+    border: solid 1px white;
+    border-radius: 20px;
 }
 
 /* best-movies-categories part */
@@ -125,21 +132,6 @@ nav {
     margin-bottom: 30px;
 }
 
-.fa-angles-left {
-    font-size: 4rem;
-    padding-right: 10px;
-}
-
-.fa-angles-left:hover,
-.fa-angles-right:hover {
-    cursor: pointer;
-    color: red;
-}
-
-.fa-angles-right {
-    font-size: 4rem;
-}
-
 .best-movies-category__list-card-movie {
     display: flex;
     justify-content: center;
@@ -159,6 +151,21 @@ nav {
 
 .card-movie-img {
     width: 100%;
+}
+
+.fa-angles-left {
+    font-size: 4rem;
+    padding-right: 10px;
+}
+
+.fa-angles-right {
+    font-size: 4rem;
+}
+
+.fa-angles-left:hover,
+.fa-angles-right:hover {
+    cursor: pointer;
+    color: red;
 }
 
 /* modal part */
@@ -194,14 +201,6 @@ nav {
     font-weight: bold;
 }
 
-.modal-head {
-    margin-bottom: 20px;
-}
-
-#modal-title {
-    color: black;
-}
-
 #modal-image {
     height: 25rem;
     float: left;
@@ -209,25 +208,12 @@ nav {
     border-radius: 15px;
 }
 
-.modal-content__body--style {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    margin: 0.375rem 0;
-}
-
-.spacer {
-    margin: 0 5px 0 5px;
+#modal-title {
+    color: black;
 }
 
 .modal-content__body {
     margin-top: 10px;
-}
-
-.modal-light {
-    font-weight: bold;
-    color: black;
-    margin-right: 5px;
 }
 
 .modal-content__body-button {
@@ -246,11 +232,35 @@ nav {
     color: red;
 }
 
-/* Modifier used by java script*/
+.spacer {
+    margin: 0 5px 0 5px;
+}
+
+
+.modal-content__body--style {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 0.375rem 0;
+}
+
+.modal-light {
+    font-weight: bold;
+    color: black;
+    margin-right: 5px;
+}
+
+/* to correct the selection at the end of the carousel with transparent color */
+img::selection {
+    background: rgba(38, 119, 201, 0);
+}
+
+/* Modifier used by java script to (not)hide elements of carousel (fa-angles-right, fa-angles-left) */
 .visibility-hidden {
     visibility: hidden;
 }
 
+/* Modifier used by java script to (not)display blocks */
 .display-none {
     display: none;
 }

@@ -1,4 +1,5 @@
 
+/* Function used to manage the click left of carousel*/
 const carouselClickLeft = function (category, cpt_carousel) {
     let leftButton = document.getElementById(`button-left-${category}`);
     leftButton.addEventListener('click', function () {
@@ -6,6 +7,7 @@ const carouselClickLeft = function (category, cpt_carousel) {
     });
 }
 
+/* Function used to manage the click right of carousel*/
 const carouselClickRight = function (category, cpt_carousel) {
     let rightButton = document.getElementById(`button-right-${category}`);
     rightButton.addEventListener('click', function () {
@@ -13,6 +15,7 @@ const carouselClickRight = function (category, cpt_carousel) {
     });
 }
 
+/* Sub-function used to manage the click right of carousel*/
 const carouselMoveRight = function (category, cpt_carousel) {
     let rightButton = document.getElementById(`button-right-${category}`);
     let leftButton = document.getElementById(`button-left-${category}`);
@@ -28,6 +31,7 @@ const carouselMoveRight = function (category, cpt_carousel) {
     }
 }
 
+/* Sub-function used to manage the click left of carousel*/
 const carouselMoveLeft = function (category, cpt_carousel) {
     let rightButton = document.getElementById(`button-right-${category}`);
     let leftButton = document.getElementById(`button-left-${category}`);
