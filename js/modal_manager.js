@@ -25,7 +25,7 @@ const displayModal = function (data) {
         }
     }
     document.getElementById('modal-image').src = data.image_url;
-    document.getElementById('modal-title').innerHTML = data.title;
+    document.getElementById('modal-title').innerHTML = data.original_title;
     document.getElementById('modal-genre').innerHTML = data.genres;
     document.getElementById('modal-date').innerHTML = data.date_published;
     document.getElementById('modal-director').innerHTML = data.directors;
@@ -41,6 +41,10 @@ const displayModal = function (data) {
 
     if ((data.long_description).length < 10) { document.getElementById('modal-body-synopsis-content').innerHTML = "-"; }
     else { document.getElementById('modal-body-synopsis-content').innerHTML = data.long_description; }
+
+    if (data.budget_currency == null) {
+        data.budget_currency = ""
+    }
 
     if (data.worldwide_gross_income == null) { document.getElementById('modal-box_office_results_inter').innerHTML = "-"; }
     else { document.getElementById('modal-box_office_results_inter').innerHTML = data.worldwide_gross_income + " " + data.budget_currency; }
